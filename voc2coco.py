@@ -11,12 +11,12 @@ import xml.etree.ElementTree as ET
 START_BOUNDING_BOX_ID = 1
 #PRE_DEFINE_CATEGORIES = {}
 # If necessary, pre-define category and its id
-PRE_DEFINE_CATEGORIES = {"abyssalis": {"Idiomarina abyssalis dumbbell":1},
-                        "baltica": {"Idiomarina baltica circle":2,"Idiomarina baltica dumbbell":3},
-                        "cupida": {"Halomonas cupida square":4,"Halomonas cupida dumbbell":5},
-                        "salinarum": {"Idiomarina salinarum dumbbell":6,"Idiomarina salinarum circle":7},
-                        "sediminum":{"Idiomarina sediminum triangle":8,"Idiomarina sediminum circle":9,"Idiomarina sediminum dumbbell":10},
-                        "zobelli":{"Idiomarina zobelli dumbbell":11,"Idiomarina zobelli circle":12}}
+PRE_DEFINE_CATEGORIES = {"CATEGORY1": {"sub cat 1":1},
+                        "CATEGORY2": {"sub cat 1":2,"sub cat 2":3},
+                        "CATEGORY3": {"sub cat 1":4,"sub cat 2":5},
+                        "CATEGORY4": {"sub cat 1":6,"sub cat 1":7},
+                        "CATEGORY5":{"sub cat 1":8,"sub cat 2":9,"sub cat 3":10},
+                        "CATEGORY6":{"sub cat 1":11,"sub cat 2":12}}
 
 
 def get(root, name):
@@ -111,7 +111,7 @@ def convert(xml_list, xml_dir, json_file):
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
-        print('3 auguments are need.')
+        print('3 arguments are needed.')
         print('Usage: %s XML_LIST.txt XML_DIR OUTPU_JSON.json'%(sys.argv[0]))
         exit(1)
 
